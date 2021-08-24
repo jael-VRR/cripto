@@ -1,7 +1,7 @@
 import { useEffect,useState} from "react";
 import axios from "axios";
-
 import TableCoins from "./components/TableCoins.jsx";
+import { Container } from 'reactstrap';
 
 const Home = () => {
   const [coins, setCoins] =useState([])
@@ -20,9 +20,9 @@ const Home = () => {
   return (
     <div>
       <h1>pagina principal</h1>
-      <div>
+      <Container>
         <TableCoins coins={coins} />
-      </div>
+      </Container>
     </div>
   );
 };
