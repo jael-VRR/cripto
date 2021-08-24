@@ -1,23 +1,23 @@
 import React from "react";
 import { Table } from "reactstrap";
+import CoinRow from "./CoinRow";
 
+const titles=["#", "Coin", "Price", "Price Change", "24h volume"]
 const tableCoins = ({ coins }) => {
   return (
     <Table dark>
       <thead>
         <tr>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
+          {titles.map((title,i) =>(
+            <td key={i}>{title}</td>
+          ))}
         </tr>
       </thead>
       <tbody>
-  
-          <th scope="row">1</th>
-          {coins.map((coin) => (
-            <tr>{coin.name}</tr>
-          ))}
-      
+        {coins.map((coin,index) => (
+          <CoinRow coin={coin} index={index+1} key={index}/>
+       
+        ))}
       </tbody>
     </Table>
   );
