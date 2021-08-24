@@ -9,7 +9,7 @@ const CoinRow = ({ coin, index }) => {
       <td  className="icon-title">
      <img src={coin.image} alt="coin" style={{width:"5%"}} className="me-4"/>
         <span className="badge badge-light">{coin.name}</span>
-        <span className="ms-2 text-muted">{coin.symbol}</span>
+        <span className="ms-2 text-muted ">{coin.symbol}</span>
  
        
       </td>
