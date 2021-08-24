@@ -1,9 +1,10 @@
 import "./App.css";
+import Home from "./Home.jsx"
 
 function App() {
   return (
     <div className="App">
-      <h1>coin market</h1>
+      <Home/>
     </div>
   );
 }
